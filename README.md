@@ -1,6 +1,8 @@
 # Catálogo de Itens API
 
-Bem-vindo ao Catálogo de Itens API! Este projeto fornece uma API para gerenciar um catálogo de itens gerais. Os itens podem ser de qualquer tipo, como peças de carro, produtos de uma loja, livros em uma biblioteca, entre outros. A API segue o padrão JSON para representar os itens, com os seguintes campos:
+### ⚠️ Projeto em andamento
+
+- Os itens podem ser de qualquer tipo, como peças de carro, produtos de uma loja, livros em uma biblioteca, entre outros. A API segue o padrão JSON para representar os itens, com os seguintes campos:
 
 - `nome`: O nome do item.
 - `valor`: O valor do item.
