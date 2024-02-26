@@ -7,19 +7,22 @@ import (
 
 func main() {
 
-	// Rotas GET com filtros da consulta
-	// do SQLite3 para não pesar no servidor
+	// Rotas GET
 
-	http.HandleFunc("/", Dashboard)
-	http.HandleFunc("/users", UsersHandle)
+	http.HandleFunc("/", acessDashboard)
+	http.HandleFunc("/item/:id", getItemByID)
 
-	// Rotas POST
-
-	// Rotas PUT
+	// Rotas CREATE
+	http.HandleFunc("/item/create/", createItem)
 
 	// Rotas DELETE
+	http.HandleFunc("/item/delete/:id", deleteItemByID)
+
+	// Rotas UPDATE
+
+	http.HandleFunc("/item/update/:id", updateItemByID)
 
 	// Avisa que vai rodar o server na porta específica e executa-o
-	fmt.Println("SERVER LOCALHOST NA PORTA :8080")
+	fmt.Println("Servindo na porta :8080")
 	http.ListenAndServe(":8080", nil)
 }

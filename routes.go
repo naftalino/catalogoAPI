@@ -1,16 +1,29 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
-// "Dashboard", porém ele só vai listar como chamar a API
-// E servir de ping para saber como está o servidor
-func Dashboard(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("[!] Dashboard")
+// O nome de cada função é autoexplicativo.
+
+func acessDashboard(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "{'erro':'Method Not Allowed','code':405}", http.StatusMethodNotAllowed)
+	}
 }
 
-func UsersHandle(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("[!] Usuários")
+func getItemByID(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func deleteItemByID(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func updateItemByID(w http.ResponseWriter, r *http.Request) {
+
+}
+
+func createItem(w http.ResponseWriter, r *http.Request) {
+
 }
