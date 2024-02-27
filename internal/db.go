@@ -1,13 +1,14 @@
 package internal
 
-// Essas rotas irão fazer toda a validação
-// antes dos dados serem realmente inseridos no banco de dados
-
-func getItemByType() bool {
+func connectToDB() bool {
 	return true
 }
 
-func putItem() bool {
+func getItemByID() bool {
+	return true
+}
+
+func createItem() bool {
 	return true
 }
 
